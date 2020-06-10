@@ -1,0 +1,22 @@
+{
+  "extends": "../../tsconfig.base.json",
+  "compilerOptions": {
+    "jsx": "react",
+    "module": "ES2015",
+    "moduleResolution": "node",
+
+    // outDir is set to just "out/" not "out/client". The client source (in
+    // client/*) references modules in server/public/. Because of this, the
+    // given "outDir" will end up with both client/ and server/ subdirectories.
+    // If we want the client files to end up in "out/client", not in
+    // "out/client/client", "outDir" needs to be just "out/"
+    "outDir": "../../out",
+  },
+  "files": [
+    "index.tsx",
+  ],
+  "exclude": [
+    "../../node_modules",
+    "../../server",
+  ],
+}

@@ -1,3 +1,9 @@
+# Generated code output directory
+out
+
+# Generated static files directory
+static
+
 # Logs
 logs
 *.log
